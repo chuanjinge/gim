@@ -6,7 +6,14 @@ import (
 	"go.uber.org/zap"
 )
 
+/**
+ * 初始化本地配置文件
+ */
 func initLocalConf() {
+	/**
+	 * LogicConf 变量已经在当前包的conf.go文件中定义好了
+	 * 此处要注意调用顺序 initLocalConf 函数的调用之前必须已经声明了 LocalConf 变量
+	 */
 	Logic = LogicConf{
 		MySQL:            "root:liu123456@tcp(112.126.102.84:3306)/gim?charset=utf8&parseTime=true",
 		NSQIP:            "112.126.102.84:4150",
@@ -18,7 +25,7 @@ func initLocalConf() {
 		UserRPCAddrs:     "addrs:///127.0.0.1:50300",
 	}
 	TCPConn = TCPConnConf{
-		TCPListenAddr: 8080,
+		TCPListenAddr: 8000,
 		RPCListenAddr: ":50100",
 		LocalAddr:     "127.0.0.1:50100",
 		LogicRPCAddrs: "addrs:///127.0.0.1:50000",
@@ -41,3 +48,26 @@ func initLocalConf() {
 	logger.Leavel = zap.DebugLevel
 	logger.Target = logger.Console
 }
+
+/**
+ *
+ *
+ *
+ *
+ *
+ * GO
+ * GO
+ * GO
+ * GO
+ * GO
+ * GO
+ * GO
+ * GO
+ * GO
+ * GO
+ *
+ *
+ *
+ *
+ *
+ */
